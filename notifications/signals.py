@@ -1,4 +1,4 @@
-from djanfo.db.models.signals import post_save
+from django.db.models.signals import post_save
 from django.dispatch import reciever
 
 from notifications.models import NotificationSetting, Notification

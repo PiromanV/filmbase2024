@@ -1,4 +1,4 @@
-{% extends 'notifications/base.html' %}
+{% extends 'base.html' %}
 {% load django_bootstrap5 %}
 
 {% block content %}
@@ -20,6 +20,4 @@
     </div>
   {% endif %}
   
-  <a href="{% url 'notification_settings' %}" class="btn btn-outline-primary">Настройки уведомлений</a>
 {% endblock %}
-
