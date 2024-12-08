@@ -10,3 +10,4 @@ def send_email_notification(user, message):
             [user.mail],
             fail_silently=False,
     )
+

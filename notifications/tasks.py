@@ -1,8 +1,8 @@
 from celery import shared_task
 from django.utils import timezone
 from datetime import timedelta
-from signup.models import NotificationSetting, Notification
-from signup.utils import send_email_notification
+from notifications.models import NotificationSetting, Notification
+from notifications.utils import send_email_notification
 
 
 @shared_task

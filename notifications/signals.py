@@ -1,7 +1,7 @@
 from djanfo.db.models.signals import post_save
 from django.dispatch import reciever
 
-from signup.models import NotificationSetting, Notification
+from notifications.models import NotificationSetting, Notification
 from films.models import Movie, Actor
 
 
