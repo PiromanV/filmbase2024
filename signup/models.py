@@ -13,7 +13,7 @@ class NotificationSetting(models.Model):
     frequency = models.CharField(max_length=20, choices=[
         ('immediate', 'Сразу после внесения данных'),
         ('weekly', 'Раз в неделю'),
-        ('montly', 'Раз в месяц'),
+        ('monthly', 'Раз в месяц'),
     ])
 
 
