@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from notifications.models import Notification, NotificationSetting
 from notifications.forms import NotificationSettingForm
@@ -24,9 +25,10 @@ def notification_settings_view(request):
                 )
         if form.is_valid():
             form.save()
-            return redirect('/notifications/settings')
+            messages.success(request, 'Настройки успешно сохранены!')
+            return redirect('notifications:settings')
     else:
-        form = NotificationSettingForm()
+        form = NotificationSettingForm(instance=notification_settings)
 
     return render(request, 'settings.html',
                   {'form': form})

@@ -19,5 +19,9 @@
       У вас нет новых уведомлений.
     </div>
   {% endif %}
+    <div class="d-flex">
+      <a href="{% url 'films:home' %}" class="ms-auto btn btn-outline-primary">На главную</a>
+      <a href="{% url 'notifications:settings' %}" class="ms-auto btn btn-outline-primary">К настройкам</a>
+    </div>
   
 {% endblock %}
